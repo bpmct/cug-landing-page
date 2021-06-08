@@ -1,0 +1,20 @@
+# Use our docs for reference:
+# https://coder.com/docs/workspaces/workspaces-as-code/templates
+version: 0.1
+workspace:
+  type: "kubernetes"
+  spec:
+    image: your-username/your-project:latest # Rename to the same as your image
+    container-based-vm: true
+    cpu: 1
+    memory: 1
+    disk: 10
+  configure:
+    start:
+      - name: "Example step"
+        command: echo "Welcome to your Coder workspace!"
+  devURLs:
+    - name: dev
+      port: 3000
+      scheme: http
+      access: private
