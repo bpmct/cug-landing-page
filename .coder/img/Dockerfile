@@ -27,3 +27,6 @@ USER coder
 
 # Copy configure script
 COPY ./scripts/configure /coder/configure
+
+# Install flask
+RUN pip install Flask
