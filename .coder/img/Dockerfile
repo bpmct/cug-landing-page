@@ -21,3 +21,6 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     apt-get install google-cloud-sdk -y
 
 USER coder
+
+# Install the Python extension
+RUN /var/tmp/coder/code-server/bin/code-server --install-extension ms-python.python
