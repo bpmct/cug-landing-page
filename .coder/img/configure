@@ -1,0 +1,4 @@
+# This script runs once the Coder workspace is started
+# and the home directory is mounted
+
+grep -qxF 'alias python=python3' /home/coder/.bashrc || echo 'alias python=python3' >> /home/coder/.bashrc

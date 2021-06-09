@@ -22,5 +22,8 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
 
 USER coder
 
+# Copy configure script
+COPY configure /coder/configure
+
 # Install the Python extension
 RUN /var/tmp/coder/code-server/bin/code-server --install-extension ms-python.python
