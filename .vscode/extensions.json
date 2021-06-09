@@ -1,7 +1,8 @@
 {
-    "recommendations": [
-        "ms-toolsai.jupyter",
-        "esbenp.prettier-vscode",
-        "ms-python.python"
-    ]
+  "recommendations": [
+    "ms-toolsai.jupyter",
+    "esbenp.prettier-vscode",
+    "ms-python.python",
+    "sanaajani.taskrunnercode"
+  ]
 }
