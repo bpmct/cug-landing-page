@@ -5,8 +5,13 @@ FROM codercom/enterprise-base:ubuntu
 
 USER root
 
+RUN apt-get update
+
 # Install python3, flask, pylint, and pip (for experiments)
-RUN apt-get update && apt-get install -y python3 python3-pip python3-flask pylint
+RUN apt-get install -y python3 python3-pip python3-flask pylint
+
+# Install other dev tools (lsof is used to kill task)
+RUN apt-get install nano lsof
 
 # Install GitHub CLI (gh)
 RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/githubcli-archive-keyring.gpg && \

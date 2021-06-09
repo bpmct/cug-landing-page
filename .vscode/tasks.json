@@ -9,9 +9,19 @@
         "statusbar": {
           "label": "$(code) flask: run"
         }
-      }
+      },
       "type": "shell",
       "command": "FLASK_ENV=development FLASK_APP=src/app.py flask run"
+    },
+    {
+      "label": "stop flask server",
+      "options": {
+        "statusbar": {
+          "label": "$(x) stop flask"
+        }
+      },
+      "type": "shell",
+      "command": "if lsof -t -i:5000; then kill $(lsof -t -i:5000) && echo \"Stopped flask server on port 5000\"; else echo \"There is nothing running on port 5000\"; fi"
     }
   ]
 }
