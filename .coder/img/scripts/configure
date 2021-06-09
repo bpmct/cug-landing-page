@@ -23,5 +23,13 @@ grep -qxF 'alias python=python3' /home/coder/.bashrc || echo 'alias python=pytho
 # Add an alias for code-server, if it doesn't exist
 grep -qxF 'alias code-server=/var/tmp/coder/code-server/bin/code-server' /home/coder/.bashrc || echo 'alias code-server=/var/tmp/coder/code-server/bin/code-server' >> /home/coder/.bashrc
 
+source /home/coder/.bashrc
+
 # Install the Python extension
-/var/tmp/coder/code-server/bin/code-server --install-extension ms-python.python
+code-server --install-extension ms-python.python
+
+# Install the Prettier extension
+code-server --install-extension esbenp.prettier-vscode
+
+# Install the CodeTour extension
+code-server --install-extension /tmp/extensions/codetour-0.0.56.vsix

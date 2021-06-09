@@ -20,7 +20,10 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     apt-get update -y && \
     apt-get install google-cloud-sdk -y
 
+# Prepare the CodeTour extension
+COPY ./extensions/ /tmp/extensions/
+
 USER coder
 
 # Copy configure script
-COPY configure /coder/configure
+COPY ./scripts/configure /coder/configure
