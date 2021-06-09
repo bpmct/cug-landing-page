@@ -23,6 +23,8 @@ grep -qxF 'alias python=python3' /home/coder/.bashrc || echo 'alias python=pytho
 # Add an alias for code-server, if it doesn't exist
 grep -qxF 'alias code-server=/var/tmp/coder/code-server/bin/code-server' /home/coder/.bashrc || echo 'alias code-server=/var/tmp/coder/code-server/bin/code-server' >> /home/coder/.bashrc
 
+# Add pip packages to PATH, if it doesn't exist
+grep -qxF 'export PATH="$HOME/.local/bin:$PATH"' /home/coder/.bashrc || echo 'export PATH="$HOME/.local/bin:$PATH"' >> /home/coder/.bashrc
 
 # Install the Python extension
 /var/tmp/coder/code-server/bin/code-server --install-extension ms-python.python
@@ -32,3 +34,6 @@ grep -qxF 'alias code-server=/var/tmp/coder/code-server/bin/code-server' /home/c
 
 # Install the CodeTour extension
 /var/tmp/coder/code-server/bin/code-server --install-extension /tmp/extensions/codetour-0.0.56.vsix
+
+# Install the Tasks exension
+/var/tmp/coder/code-server/bin/code-server --install-extension actboy168.tasks

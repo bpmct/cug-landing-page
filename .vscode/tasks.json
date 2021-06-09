@@ -1,0 +1,17 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "flask: run",
+      "options": {
+        "statusbar": {
+          "label": "$(code) flask: run"
+        }
+      }
+      "type": "shell",
+      "command": "FLASK_ENV=development FLASK_APP=src/app.py flask run"
+    }
+  ]
+}

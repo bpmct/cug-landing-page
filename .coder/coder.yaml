@@ -44,6 +44,6 @@ workspace:
   dev-urls:
     value:
       - name: flask
-        port: 8000
+        port: 5000
         scheme: http
         access: org
