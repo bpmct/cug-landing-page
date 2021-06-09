@@ -9,18 +9,18 @@ workspace:
         value: 1
       image:
         value: bencdr/flask-cug:next
-      container-based-vm: 
+      container-based-vm:
         value: false
-      memory: 
+      memory:
         value: 1
-      disk: 
+      disk:
         value: 10
   configure:
     start:
-      value: 
+      value:
         - name: "Clone the git repository, if it doesn't exist"
           env:
-            GIT_REMOTE: https://github.com/bpmct/cug-landing-page.git
+            GIT_REMOTE: git@github.com:bpmct/cug-landing-page.git
             CLONE_TO: /home/coder/cug-landing-page
           command: |
             # Check if the project directory already exists 
