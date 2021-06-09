@@ -20,7 +20,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.c
     apt-get update -y && \
     apt-get install google-cloud-sdk -y
 
-# Copy extensions
+# Copy extensions folder (built manually)
 COPY ./extensions/ /tmp/extensions/
 
 USER coder
