@@ -7,14 +7,14 @@
 # Create a .bash_profile file if it doesn't exist
 if [ ! -f ~/.bash_profile ]; then
     touch ~/.bash_profile
-    echo "#/bin/sh" > ~/.bash_profile
+    echo "#/bin/bash" > ~/.bash_profile
     echo "source ~/.bashrc" >> ~/.bash_profile
 fi
 
 # Create a .bashrc if it doesn't exist
 if [ ! -f ~/.bashrc ]; then
     touch ~/.bashrc
-    echo "#/bin/sh" > ~/.bashrc
+    echo "#/bin/bash" > ~/.bashrc
 fi
 
 # Add an alias python=python3, if it doesn't exist
@@ -23,13 +23,12 @@ grep -qxF 'alias python=python3' /home/coder/.bashrc || echo 'alias python=pytho
 # Add an alias for code-server, if it doesn't exist
 grep -qxF 'alias code-server=/var/tmp/coder/code-server/bin/code-server' /home/coder/.bashrc || echo 'alias code-server=/var/tmp/coder/code-server/bin/code-server' >> /home/coder/.bashrc
 
-source /home/coder/.bashrc
 
 # Install the Python extension
-code-server --install-extension ms-python.python
+/var/tmp/coder/code-server/bin/code-server --install-extension ms-python.python
 
 # Install the Prettier extension
-code-server --install-extension esbenp.prettier-vscode
+/var/tmp/coder/code-server/bin/code-server --install-extension esbenp.prettier-vscode
 
 # Install the CodeTour extension
-code-server --install-extension /tmp/extensions/codetour-0.0.56.vsix
+/var/tmp/coder/code-server/bin/code-server --install-extension /tmp/extensions/codetour-0.0.56.vsix
