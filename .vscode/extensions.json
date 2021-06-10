@@ -3,6 +3,7 @@
     "ms-toolsai.jupyter",
     "esbenp.prettier-vscode",
     "ms-python.python",
-    "sanaajani.taskrunnercode"
+    "sanaajani.taskrunnercode",
+    "wholroyd.jinja"
   ]
 }
