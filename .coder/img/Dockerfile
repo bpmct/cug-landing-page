@@ -8,7 +8,7 @@ USER root
 RUN apt-get update
 
 # Install python3, flask, pylint, and pip (for experiments)
-RUN apt-get install -y python3 python3-pip python3-flask pylint
+RUN apt-get install -y python3 python3-pip python3-flask=1.1.1-2 pylint
 
 # Install other dev tools (lsof is used to kill task)
 RUN apt-get install -y nano lsof
