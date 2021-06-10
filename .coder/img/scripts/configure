@@ -4,7 +4,7 @@
 # and the home directory is mounted and the workspace-agent
 # has injected some programs (such as code-server)
 
-# clone the git repository
+# clone the github repository
 GIT_REMOTE=git@github.com:bpmct/cug-landing-page.git
 CLONE_TO=/home/coder/cug-landing-page
 # Check if the project directory already exists 
