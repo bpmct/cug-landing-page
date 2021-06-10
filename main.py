@@ -1,6 +1,9 @@
 from flask import Flask, render_template
 import glob, os
+from flask_talisman import Talisman
+
 app = Flask(__name__)
+Talisman(app, content_security_policy=[])
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
