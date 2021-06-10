@@ -5,6 +5,7 @@ FROM codercom/enterprise-base:ubuntu
 
 USER root
 
+# Get latest packages
 RUN apt-get update
 
 # Install python3, flask, pylint, and pip (for experiments)
