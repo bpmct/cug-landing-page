@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Coder User Group</title>
   </head>
   <body>
+    <div class="w3-container w3-dark-grey">
     <h1>Coder User Group</h1>
 
     <a
@@ -20,9 +22,9 @@
     <a href="https://coder.cug.coderworkshop.com" target="_blank">
       Log in to Coder
     </a>
-
+	</div>
+	<article class="w3-container w3-pale-yellow">
     <br /><br />
-
     <h2>People</h2>
     {% for key, value in people.items() %}
     <li>
@@ -31,7 +33,7 @@
     {% endfor %}
 
     <br /><br />
-
+	
     <a
       href="https://coder.cug.coderworkshop.com/wac/build?template_oauth_service=github&template_url=https://github.com/bpmct/cug-landing-page&template_ref=main&template_filepath=.coder/coder.yaml"
       alt="Open in Coder"
@@ -43,7 +45,7 @@
     <a href="https://github.com/bpmct/cug-landing-page" target="_blank"
       >https://github.com/bpmct/cug-landing-page
     </a>
-
+	
     <br />
     <hr />
     <h2>Other applications</h2>
@@ -65,5 +67,6 @@
         >Create workspace</a
       >
     </p>
+  </article>
   </body>
 </html>
