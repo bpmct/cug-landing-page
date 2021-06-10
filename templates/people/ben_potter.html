@@ -1,5 +1,34 @@
-Ben
-<br />
-landing
-<br />
-page
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ben Potter</title>
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hi, I'm <a href="https://twitter.com/bpmct">Ben</a> 👋🏼</h1>
+
+    <p>Developer Advocate at Coder</p>
+
+    <br />
+    <strong>Latest tweets:</strong>
+
+    <hr />
+    {% for tweet in tweets %}
+    <div>
+      <blockquote>{{ replaceUrl(tweet.tweet) | safe }}</blockquote>
+      <hr />
+    </div>
+    {% endfor %}
+
+    <br /><br />
+
+    <a href="/">Go home</a>
+  </body>
+</html>
