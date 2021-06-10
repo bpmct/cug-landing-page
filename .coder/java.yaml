@@ -1,0 +1,17 @@
+# Use our docs for reference:
+# https://coder.com/docs/workspaces/workspaces-as-code/templates
+version: 0.2
+workspace:
+  type: "kubernetes"
+  specs:
+    kubernetes:
+      cpu:
+        value: 4
+      image:
+        value: codercom/enterprise-intellij:ubuntu
+      container-based-vm:
+        value: true
+      memory:
+        value: 8
+      disk:
+        value: 20
