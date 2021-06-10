@@ -38,5 +38,8 @@ grep -qxF 'export PATH="$HOME/.local/bin:$PATH"' /home/coder/.bashrc || echo 'ex
 # Install the Tasks exension
 /var/tmp/coder/code-server/bin/code-server --install-extension actboy168.tasks
 
+# Install the jinja exension
+/var/tmp/coder/code-server/bin/code-server --install-extension wholroyd.jinja
+
 # Install Flask apps
-pip install flask-talisman
+pip install flask-talisman tweetpy twint

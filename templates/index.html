@@ -7,28 +7,63 @@
     <title>Coder User Group</title>
   </head>
   <body>
-    <h1>User group</h1>
+    <h1>Coder User Group</h1>
 
-    Get a workshop account: https://coder.cug.coderworkshop.com
+    <a
+      href="https://login.cug.coderworkshop.com/auth/realms/master/protocol/openid-connect/auth?client_id=Coder&redirect_uri=https%3A%2F%2Fcoder.cug.coderworkshop.com%2Foidc%2Fcallback&response_type=code&scope=openid+profile+email&state=60c20610-83c1b42a6c3336c1fc646f0c"
+      target="_blank"
+      >Get a workshop account
+    </a>
+
+    |
+
+    <a href="https://coder.cug.coderworkshop.com" target="_blank">
+      Log in to Coder
+    </a>
 
     <br /><br />
 
-    Log in to Coder:
-    <a href="https://coder.cug.coderworkshop.com"
-      >https://coder.cug.coderworkshop.com
-    </a>
+    <h2>People</h2>
+    {% for key, value in people.items() %}
+    <li>
+      <a href="people/{{ value }}" target="_blank">{{ key }} </a>
+    </li>
+    {% endfor %}
 
-    <hr />
-
-    <br />
-
-    <p>Edit this application from a Coder workspace:</p>
+    <br /><br />
 
     <a
       href="https://coder.cug.coderworkshop.com/wac/build?template_oauth_service=github&template_url=https://github.com/bpmct/cug-landing-page&template_ref=main&template_filepath=.coder/coder.yaml"
       alt="Open in Coder"
       title="Open in Coder"
-      ><img src="https://cdn.coder.com/embed-button.svg"
-    /></a>
+      target="_blank"
+      ><img src="https://cdn.coder.com/embed-button.svg" />
+    </a>
+    <br />
+    <a href="https://github.com/bpmct/cug-landing-page" target="_blank"
+      >https://github.com/bpmct/cug-landing-page
+    </a>
+
+    <br />
+    <hr />
+    <h2>Other applications</h2>
+
+    <p>
+      VNC (Virtual Desktop):
+      <a
+        href="https://coder.cug.coderworkshop.com/wac/build?template_oauth_service=github&template_url=https://github.com/bpmct/cug-landing-page&template_ref=main&template_filepath=.coder/vnc.yaml"
+        target="_blank"
+        >Create workspace</a
+      >
+    </p>
+
+    <p>
+      Java + IntelliJ:
+      <a
+        href="https://coder.cug.coderworkshop.com/wac/build?template_oauth_service=github&template_url=https://github.com/bpmct/cug-landing-page&template_ref=main&template_filepath=.coder/java.yaml"
+        target="_blank"
+        >Create workspace</a
+      >
+    </p>
   </body>
 </html>
