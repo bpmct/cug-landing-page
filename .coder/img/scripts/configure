@@ -40,3 +40,4 @@ grep -qxF 'export PATH="$HOME/.local/bin:$PATH"' /home/coder/.bashrc || echo 'ex
 
 # Install Flask apps
 pip install flask-talisman
+pip install --user --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint
