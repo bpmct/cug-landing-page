@@ -7,9 +7,6 @@ __pycache__/
 # C extensions
 *.so
 
-# twint
-src/twint/
-
 # Distribution / packaging
 bin/
 build/
