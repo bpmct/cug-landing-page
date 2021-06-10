@@ -24,7 +24,7 @@
     },
     {
       "file": "main.py",
-      "description": "# create your branch\n\nBecause this is a open source project, you'll need to fork it and add the remote.\n\n## 1. fork\n\nYou can do fork from GitHub UI: [https://github.com/bpmct/cug-landing-page](https://github.com/bpmct/cug-landing-page) or the command line, since the `gh` command is installed (see below):\n\n>> gh login && gh repo fork git@github.com:bpmct/cug-landing-page.git\n\n## 2. add remote\n\n1. [tap me to add remote in VS Code](command:git.addRemote)\n1. select \"cug-landing-page\"\n1. in the SSH path of the fork you created\n1. name it `my-fork`\n\n## 3. checkout to new branch\n\nthis command will create one from your coder username:\n\n>> git checkout -b $CODER_USERNAME/page my-fork/man",
+      "description": "# create your branch\n\nBecause this is a open source project, you'll need to fork it and add the remote.\n\n## 1. fork\n\nYou can do fork from GitHub UI: [https://github.com/bpmct/cug-landing-page](https://github.com/bpmct/cug-landing-page) or the command line, since the `gh` command is installed (see below):\n\n>> gh login && gh repo fork git@github.com:bpmct/cug-landing-page.git\n\n## 2. add remote\n\n![](https://i.imgur.com/DpzFJhQ.png)\n\n1. [tap me to add remote in VS Code](command:git.addRemote)\n1. enter the SSH path of the fork you created\n1. name it `my-fork`\n\n## 3. checkout to new branch\n\nthis command will create one from your coder username:\n\n>> git checkout -b $CODER_USERNAME/page my-fork/main",
       "line": 1
     },
     {
