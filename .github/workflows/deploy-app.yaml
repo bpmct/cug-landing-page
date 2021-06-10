@@ -9,12 +9,6 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v1
-      # - name: Set up Cloud SDK
-      #   uses: google-github-actions/setup-gcloud@master
-      #   with:
-      #     project_id: ${{ secrets.APP_ENGINE_PROJECT_NAME }}
-      #     service_account_key: ${{ secrets.GCLOUD_AUTH }}
-      #     export_default_credentials: true
       - name: Deploy an App Engine app
         id: deploy-app
         uses: google-github-actions/deploy-appengine@main

@@ -3,7 +3,8 @@
     "ms-toolsai.jupyter",
     "esbenp.prettier-vscode",
     "ms-python.python",
-    "sanaajani.taskrunnercode",
-    "wholroyd.jinja"
+    "wholroyd.jinja",
+    "actboy168.tasks",
+    "vsls-contrib.codetour"
   ]
 }

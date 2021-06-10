@@ -1,0 +1,55 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Start Developing",
+  "steps": [
+    {
+      "file": "README.md",
+      "description": "# welcome!\n\nThis is a [CodeTour](https://marketplace.visualstudio.com/items?itemName=vsls-contrib.codetour), an extension by Microsoft that walks you through a codebase.\n\nThanks to Coder, you're already set up with this project and ready to start developing. Go to the next step for more details.",
+      "line": 1,
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 1
+        },
+        "end": {
+          "line": 2,
+          "character": 1
+        }
+      }
+    },
+    {
+      "file": ".vscode/settings.json",
+      "description": "# IDE settings\n\nThis project has some IDE settings so that everyone is on the same page. However, you can set some personal settings too. To start, let's go into dark mode. Tap the command below:\n\n>> echo \"{ \\\"workbench.colorTheme\\\": \\\"Default Dark+\\\" }\" > ~/.local/share/code-server/User/settings.json\n\nYour IDE settings can also be managed in the Ui, just like VS Code: *File -> Preferences -> Settings*\n\n",
+      "line": 1
+    },
+    {
+      "file": "main.py",
+      "description": "# create your branch\n\nBecause this is a open source project, you'll need to fork it and add the remote.\n\n## 1. fork\n\nYou can do fork from GitHub UI: [https://github.com/bpmct/cug-landing-page](https://github.com/bpmct/cug-landing-page) or the command line, since the `gh` command is installed (see below):\n\n>> gh login && gh repo fork git@github.com:bpmct/cug-landing-page.git\n\n## 2. add remote\n\n1. [tap me to add remote in VS Code](command:git.addRemote)\n1. select \"cug-landing-page\"\n1. in the SSH path of the fork you created\n1. name it `my-fork`\n\n## 3. checkout to new branch\n\nthis command will create one from your coder username:\n\n>> git checkout -b $CODER_USERNAME/page my-fork/man",
+      "line": 1
+    },
+    {
+      "directory": "templates/people",
+      "description": "# add your page\n\nAll you need to do to add a page is add a html file in the `templates/people` folder. Name it `firstname_lastname.html`.\n\nTo preview your changes, hit the \"flask: run\" button in the blue bar on the bottom of code-server. You can use the Dev URL in the Coder dashboard to preview the changes, or even share the url."
+    },
+    {
+      "file": "main.py",
+      "description": "# bonus: custom route\n\nThis is a Flask app. If you want to add some python magic to your page, such as Ben's twitter scraper, add the route here.",
+      "line": 54
+    },
+    {
+      "file": "README.md",
+      "description": "# commit, push, submit a PR\n\nafter you've made your changes, use the git sidebar or the terminal to commit your changes. submit a pull request to get it on cug.coderworkshop.com: [https://github.com/bpmct/cug-landing-page/pulls](https://github.com/bpmct/cug-landing-page/pulls)",
+      "line": 7,
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 1
+        },
+        "end": {
+          "line": 2,
+          "character": 1
+        }
+      }
+    }
+  ]
+}
