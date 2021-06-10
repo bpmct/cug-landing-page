@@ -4,6 +4,9 @@
 __pycache__/
 *.py[cod]
 
+# Ignore twint
+src/twint
+
 # C extensions
 *.so
 
