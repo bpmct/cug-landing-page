@@ -4,6 +4,24 @@
 # and the home directory is mounted and the workspace-agent
 # has injected some programs (such as code-server)
 
+# clone the git repository
+GIT_REMOTE=git@github.com:bpmct/cug-landing-page.git
+CLONE_TO=/home/coder/cug-landing-page
+# Check if the project directory already exists 
+if [ ! -d $CLONE_TO ]; then
+    # 1. ensure we have GitHub's host key added to known_hosts
+    touch ~/.ssh/known_hosts
+    if ! grep github.com ~/.ssh/known_hosts > /dev/null; then
+    ssh-keyscan github.com >> ~/.ssh/known_hosts 2> /dev/null
+    fi
+    
+    2. Clone the project
+    echo "$CLONE_TO is empty... Cloning"
+    git clone $GIT_REMOTE $CLONE_TO
+else
+    echo "$CLONE_TO exists ✅"
+fi
+
 # Create a .bash_profile file if it doesn't exist
 if [ ! -f ~/.bash_profile ]; then
     touch ~/.bash_profile
@@ -41,6 +59,5 @@ grep -qxF 'export PATH="$HOME/.local/bin:$PATH"' /home/coder/.bashrc || echo 'ex
 # Install the jinja exension
 /var/tmp/coder/code-server/bin/code-server --install-extension wholroyd.jinja
 
-# Install Flask apps
-pip install flask-talisman
-pip install --user --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint
+# Install pip apps from project
+pip install -r /home/coder/cug-landing-page/requirements.txt
